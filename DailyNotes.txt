@@ -1,0 +1,72 @@
+
+JAVA 
+
+
+Servlets:
+
+		JAVA -->OOPL-->james gosling-->1996 -->sun micro system-->oracle
+		
+		java version-->22
+		
+		JSE						JEE 		JME
+	corejava,awt,swings...		Servlets	
+
+standlone app/desktop apps	
+
+web applications			http gmail
+
+		server  -->tomcat -->apache 
+
+Servlets:
+==========
+	Login app
+				javax.servlet     --->jakarta
+				javax.servlet.http
+	
+			1) implementes Servlet(I) 	-->5 methods init,service,destroy,getServletInfo,getServletConfig
+			2) extends GenericServlet(C)-->service
+			3) extends HttpServlet(C)   -->doGet,DoPut,doPost,doDelete
+
+
+
+class Login extends HttpServlet
+{
+
+
+
+
+
+}
+
+	HTTP:stateless protocol
+
+		HttpSession-->server side
+		Cookies		-->client side 
+
+
+	HttpSession hs=request.getSession(true);
+
+
+	JSP-->java+html
+	make changes and refresh the browser
+	
+	
+	
+	implicit objects
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
