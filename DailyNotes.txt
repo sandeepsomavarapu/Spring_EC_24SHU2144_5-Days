@@ -28,8 +28,9 @@ Servlets:
 			3) extends HttpServlet(C)   -->doGet,DoPut,doPost,doDelete
 
 
-
-class Login extends HttpServlet
+1*12=12
+100*12=1200 methods
+class Login extends HttpServlet(12)
 {
 
 
@@ -50,27 +51,145 @@ class Login extends HttpServlet
 	JSP-->java+html
 	make changes and refresh the browser
 	
-	
-	
 	implicit objects
 	
 	
-	
-	
-	<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-    http://www.springframework.org/schema/context
-    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
-    
-    <bean id="emp" class="com.nec.springcore.Employee"></bean>
-    
+Spring Framework:
+=================
 
-</beans>
+			Spring is non-invasive framework which is used to make light weight  and loosley coupled application.
+	
+		Framework:Ready Made
 	
 	
+			Invasive	:struts,it will force to the developer to implement predefined API
+			Non-invasive :spring,hibernate,will never force to implement predefind api
+	
+			
+			light weight  light weight framework
+			heavy weight 	EJB,Servlets
+			
+			
+			loosley coupled 
+			tightly coupled
+	
+	
+	
+	class Test
+	{
+		public void m1()
+		{
+			A a=new A();
+			a.m2()
+		}
+	
+	}
+	
+	class A
+	{
+	A(String name){
+	
+	}
+	public void m2(){
+	
+	}
+	
+	
+	
+	}
+	
+	
+	
+	
+	Spring Container
+	
+	
+	
+	2003 spring 1.x
+	
+	Rod JOHNSON
+	
+	EJB--->interface21-->2003
+	
+	
+	6.x
+	
+	Spring 
+	20+ modules
+	
+	spring core
+	spring jdbc
+	spring mvc
+	spring jpa
+	spring orm
+	spring aop
+	spring security....
+	
+	
+	spring core/IOC/Dependency injection
+		
+				container -->BeanFactory,ApplicationContext
+	
+			life cycle of a object
+	
+				1)creation of object
+				2)wiring the object
+				3)configuring the objects
+				4)destroying the object
+	
+	
+		setter injection		-->property
+		constrctor injection	-->constructor-arg
+		autowiring
+		
+						configuration:XMl,annotation,java config
+						
+						
+			class Test{	
+											config file /containers:BF,AC
+			
+			}			
+						
+			class Employee{
+			
+			
+			}			
+						spring jars--maven
+						
+						
+						
+				Autowiring	-->container	-->autowire-->@Autowired
+						
+						
+	Annotation Config	:xml-->annotations				
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
 	
 	
 	
