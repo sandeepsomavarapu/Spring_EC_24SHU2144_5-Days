@@ -128,7 +128,7 @@ Spring Framework:
 	
 	spring core/IOC/Dependency injection
 		
-				container -->BeanFactory,ApplicationContext
+				container -->BeanFactory-->lazy intializer,ApplicationContext-->eager intializer
 	
 			life cycle of a object
 	
@@ -143,7 +143,7 @@ Spring Framework:
 		autowiring
 		
 						configuration:XMl,annotation,java config
-						
+							<beans><bean><property><constructor-arg>,ref,scope,autowire,id,class
 						
 			class Test{	
 											config file /containers:BF,AC
@@ -165,16 +165,133 @@ Spring Framework:
 						
 						
 						
+						@Component/@Service/@Repository
+						@Autowired
+						@Configuration
+						@ComponentScan
+						@Value
+						@Bean
+						@Qualifier
+						@Controller
+						@RequestMapping
+
+	NOTE:Spring has given annotations for userdefined classes but not for predefined classes 
+																			jpa/hibernate,datasource
+				Java Config		
 						
+Spring MVC	:
+============
+			MVC-->model view controller 
+							
 						
+		front controller	-->DispatcherServlet	
+
+
+
+Spring BOOT:		spring boot 3.x java 17 spring 6
+===========
+		
+			1)configuration
+			2)dependencies		(java/jpa/hibernate/database/server/spring....)
+			3)Server
+
+
+
+1)Auto Configuration :Most of the commonly used classes already configured by the spring boot.
+2)Starters
+3)Embeded server		tomcat 
+4)Actuator				rest endpoints
+5)Embeded DB			H2
+
+		
+		STS-->Spring tool suite
+
+
+		starter parent
+
+
+Spring Boot
+
+		SOA
+Webservices:
+============		REST
+
+	ATM	-->atm card  X bank atm card -->
+	
+		withdraw,....
+
+	phonepe-->electricity-->service no 
+
+
+
+RMI			
+EJB		app1      app2
+SP
+
+DCOM    .net  .net
+RPC      c/C++
+CORBA	Interoperable apps
+
+
+
+SOAP
+
+REST
+
+
+
+		MYSQL
+
+
+
+				spring boot rest app JPAHIbernate
+
+
+				
+						java--->database 
 						
+							JDBC-->create tables/constraints/sequence(mysql/oracle)
 						
-						
-						
-						
-						
-						
-						
+							JPA/hibernate-->no need of tables,query's
+							
+							JPA--->Specification
+							hibernate--->implementation
+							
+							
+							@Id
+							@Entity
+							
+							
+				1)	Add Product
+				2)update Product
+				3)delete product
+				4)get Product
+				5)getAllProducts
+				6)getAllProductsBetweenPrice
+				7)getAllProductsByCategory
+				
+				
+				
+				
+				Layered Architecture:
+				=====================
+				
+					Presentation Layer/Controller Layer/UI
+					
+					Service Layer/Business layer		interface-->class
+					
+					Repository layer/persistence layer/DAO	interface --->class
+					
+				
+				
+				
+							
+							
+							
+							
+							
+							
+							
 						
 						
 						
