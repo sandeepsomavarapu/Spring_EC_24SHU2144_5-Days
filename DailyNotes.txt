@@ -260,6 +260,8 @@ REST
 							
 							@Id
 							@Entity
+							@GeneratedValue
+							@Column
 							
 							
 				1)	Add Product
@@ -283,12 +285,79 @@ REST
 					Repository layer/persistence layer/DAO	interface --->class
 					
 				
-				
-				
+Week-2:
+=========				 2003-->Rod Johnson-->sourceforge
+
+POJO
+				spring core
+				spring aop
+				spring jdbc
+				spring mvc
+				spring security
+				spring web
+				spring orm
+				...
+			
+
+spring IOC
+
+Dependency injection
+
+IOC 
+
+servlet
+ejb				
+
+
+	1)implements Servlet
+	2)extends GenericServlet
+	3)extends HttpServlet
+	
+	class Test extends HttpServlet
+	{
+	
+	}
+
+Spring :non-invasive,light weight,loosley coupled
+		Invasive
+		non-invasive
+
+
+		Container-->BeanFactory/ApplicationContext
+		
+		1)instantiation
+		2)Wiring 
+		3)configuring
+		4)destroy
+
+
+
+	class	Test
+	{
+	
+	}
+							container(config)1.xml,2.annotation,3.java config
+
+	class Client
+	{
+	
+	
+	}
+		setter injection			<property>	
+		constrcutor injection		<constructor-arg>
+		autowiring
+
+
+
+
+	@Component/@Service/@Repository
+
+			
 							
-							
-							
-							
+	Note:
+	====
+	Spring has given annotations for userdefined classes but not for predefined classes 
+							@Component/@Service/@Repository/@Autowired
 							
 							
 							
