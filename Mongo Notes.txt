@@ -1,0 +1,401 @@
+MongoDB:
+----------
+
+it is database from MongoDB Vendor
+
+mongodb.com
+
+
+mongo-->extremly large data 
+
+
+
+MEAN-->MONGODB,EXPRESS,ANGULAR,NODEJS
+
+MERN-->MONGODB,EXPRESS,REACR,NODEJS
+
+
+
+
+MONGO IS JAVASCRIPT BASED DB
+
+INTERNALLY IT IS USING MOZILLA'S SPIDER MONKEY  JAVASCRIPT ENGINE.
+
+JSON FORMAT USED FOR CRUD & BSON FORMAT IS GOING TO USE INTERNALLY
+
+
+IT IS DOCUMENT BASED DB AND NO SQL DB
+
+
+1)RELATIONAL DATABASES/SQL DATABASES
+-----------------------------------
+
+RDB WILL USE TABLES,RELATIONSHIPS,FIXED SCHEMA,JOIN QUERYS   EX: ORACLE,MYSQL,DB2...
+
+2)DOCUMENT TYPE DATABASE /NOSQL DATABASE
+ ----------------------------------------
+ 
+ DATA WILL BE STORED IN THE DOCUMENT FORMAT,NO SCHEMA,NOT REQUIRED TO HAVE  JOIN QUERIES(PERFORMANCE IS MORE)
+ 
+ 
+ EX:MONGODB,CASSANDRA,Hbase,Redis,Couch DB,HyperGraphDB
+ 
+ 
+ database-->collections-->documents
+ 
+ collection-->table
+ document--->record/row
+ 
+ 
+ table		-->records/rows	
+ collections--->documents--->
+
+
+NOSQL--->NOT ONLY SQL
+
+
+
+INSTALLATION OF MONGODB:
+-----------------------
+2 APPLCATIONS 
+
+WHEN WE INSTALL MONGODB WE WILL GET 2 APPS
+
+1) MONGODB SHELL CLIENT  2)MONGODB SERVER 
+
+
+MONGODB SERVER IS RESPONSIBLE TO STORE OUR DATA IN DATABASE
+
+MONGODB SHELL IS RESPONSIBLE TO MANAGE SERVER
+
+BY USING THIS SHELL WE CAN PERFORM  ALL REQUIRED CRUD OPERATIONS
+
+
+TO LAUNCH MONGODB SERVER -->mongod  command
+
+TO LAUNCH MONGODB Shell -->mongo  command
+
+
+gui support also there for shell-->compass,Robo t3
+
+
+
+
+
+
+MongoDB DRIVERS:
+================
+
+
+TO COMMUNICATE WITH MONGODB FROM JAVA/PYTHON.. NEED TO HAVE DRIVER 
+
+
+
+
+default port number 27017 
+
+
+
+mongodb  27017
+oracle   1521
+mysql    3366
+postgre  5432
+DB2      25000
+
+
+https://www.mongodb.com/try/download/community
+
+
+
+
+to start server mongod command
+to start shell mongo command
+
+
+once we start server, we can open shell in other command line and execute command
+
+
+db is predefined object
+
+
+db.version()-->to check the version
+
+db.help()-->will give all the methods...
+
+
+
+show dbs  -->to see databases 
+
+admin   0.000GB  --> admin db is used to store user  authentication and authorization info like usernames and password &roles and used by adminstrators
+config  0.000GB  --> to store configurations of mongodb  server like port,logs,data files...
+local   0.000GB  --> local db used in relplications(duplicates)
+
+
+use admin -->to connect to admin db
+
+show collections-->which displays collections in admin
+
+
+
+mongo compass/Robo 3t  GUI
+
+
+Data formats:
+-------------
+JSON vs BSON(Binary) vs EJSON(extended)
+
+
+
+
+User input in the form of JSON
+
+data will be stored in mongodb server in BSON 
+
+EJSON IS USED TO REPRESENT  json-->bson//bson-->json
+
+
+
+DATABASE AND COLLECTION CREATION:
+---------------------------------
+
+EVERY DB CONTAINSE SEVERAL COLLECTIONS 
+EVERY COLLECTION CONTAINSE SEVERAL DOCUMENTS
+
+COLLECTION--->TABLE
+
+DOCUMENT-->RECORD/ROW
+
+
+USE DATBASENAME
+
+
+use sandeepdb--->database wont create when we create collection then db will be created
+
+
+create colections
+--------------------
+db.createCollection("employees")
+
+
+to see collection:
+-----------------
+show collections  
+
+to drop collections:
+--------------------
+db.employees.drop()
+
+
+to drop database
+----------------
+db.dropDatabase()
+
+
+Basic CRUD Operations:
+------------------------ 
+
+db.collection.insertOne()
+db.collection.insertMany()
+db.collection.insert()
+
+
+eg:
+---
+db.employees.insertOne({eno:100,ename:"suresh",esal:1000,eadd:"hyderabad"})
+
+
+to fetch:
+-----------
+db.employees.find()-->all 
+db.employees.find().pretty()-->all with readable 
+db.employees.findOne()-->one
+
+
+to Update:
+----------
+
+db.collection.updateOne()
+db.collection.updateMany()
+db.collection.replaceOne()
+
+eg:
+db.employees.updateOne({ename:"suresh"},{$set:{esal:10000}})
+
+
+
+to Delete:
+-----------
+db.collection.deleteOne()
+
+db.collection.deleteMany()
+
+ex:
+--
+
+db.employees.deleteOne({ename:"suresh"})
+
+
+
+
+**w/o employees collection if we are trying create record it will create collection and record..
+
+db.employees.insertOne({eno:100,ename:"suresh",esal:1000,eadd:"hyderabad"})
+
+
+
+capped collection:-
+-----------------
+
+db.createCollection(name)
+db.createCollection(name,options)
+
+max 1000 documents-->1001 document,old documents will be deleted
+
+
+db.createCollection("employees",{capped:true,size:329989,max:1000})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

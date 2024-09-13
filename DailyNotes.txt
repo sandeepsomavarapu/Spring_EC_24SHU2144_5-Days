@@ -307,11 +307,11 @@ IOC
 
 servlet
 ejb				
-
+			javax/jakarta
 
 	1)implements Servlet
 	2)extends GenericServlet
-	3)extends HttpServlet
+	3)extends HttpServlet 12 methods
 	
 	class Test extends HttpServlet
 	{
@@ -345,7 +345,7 @@ Spring :non-invasive,light weight,loosley coupled
 	}
 		setter injection			<property>	
 		constrcutor injection		<constructor-arg>
-		autowiring
+		autowiring					autowire=""
 
 
 
@@ -355,34 +355,225 @@ Spring :non-invasive,light weight,loosley coupled
 			
 							
 	Note:
-	====
-	Spring has given annotations for userdefined classes but not for predefined classes 
+	====															  datasource,transaction,security	
+	Spring has given annotations for userdefined classes but not for predefined classes .
+	
 							@Component/@Service/@Repository/@Autowired
 							
+	Spring Boot:AutoConfiguration						
 							
-							
 						
 						
 						
+			JPA-->JDBC-->			
+				orm tools-->hibernate,eclipse link,topi link,ibatis....		
+						spring JPA
 						
 						
+Spring Boot:
+============		3.x-->spring 6.x-->17				
 						
+			1)maven dependencies
+			2)server
+			3)configuration
+			
+			
 						
-						
-						
-						
-						
-						
-						
-						
-						
+			1)auto configuration :most of the comonnly used classes already configured by the spring boot			
+			2)embeded server	(tomcat)			
+			3)starters	
+			4)actuators  /beans/health/....
+			5)inbuilt DB(h2)
+	
+	
+	spring boot rest
+	
+	
+	webservices:
+	
+			SOAP-->XML
+			REST
+		
+				JSON,XML,htML,PT,JS
 	
 	
 	
 	
+			app---->	postman
+	
+
+	1)AddEmployee
+	2)updateEmployee
+	3)deleteEmployee
+	4)getEmployee
+	5)getAllEmployees
+	6)getAllEmployeesBetweenSalaries
+	7)getAllByDesignation
 	
 	
+	Repository layer
 	
 	
+	JpaRepository/CrudRepository
 	
 	
+	CrudRepository-->
+	
+	JpaRepository-->
+	
+	jpa-->persist,merge,remove,find,createQuery-->(JPQL)
+		save
+		saveAll
+		findById
+		existsById
+		findAll
+		findAllById
+		deleteById
+		delete
+		deleteAllById
+		deleteAll
+		
+Monolithic Architecture:
+
+		scalling up/scalling down
+		
+			
+		
+Microservices:
+		
+		decompose/devide/split your large project into smaller services and later communicate them
+		
+		
+			independently deployable
+			independently scallable
+			independently developed
+			independently tested
+			
+			communication
+				
+					synchronous		HTTP-->RestTemplate,webclient,open fiegn
+					asynchronous	rabbitMQ,ActiveMQ,kafka		
+	Spring cloud	
+		
+		
+				authentication
+				autherization
+		Shopping cart app
+			
+		RestTemplate-->
+		Blocking Nature: RestTemplate is synchronous and blocks the executing thread until the request completes
+		
+		
+		Webclient
+		
+		
+		microservices design patterns
+		
+		shoppingcart app
+			1      2      3       4
+		db 		 db	     db		  db	mysql	
+		
+		
+		spring cloud config server -->https://github.com/sandeepsomavarapu/config-server-repo.git
+		
+		centralised config		--->git repo
+		
+		
+		1)add config client starter dependency to each microservice
+		
+		2)create spring boot by adding config server dependency
+		
+		3)inside new spring boot (config server)-->git url
+		
+			@EnableConfigServer 
+		
+		refresh:
+		devtools
+		
+		
+		Eureka service registry
+		
+			1)create new spring boot project with eureka server dependency
+				1.1)add @EnableEurekaServer
+				1.2)add properties
+			2)for all microservices add eureka discovery client dependency
+		
+			3)eureka.client.serviceUrl.defaultZone  = http://localhost:8761/eureka
+		
+		
+		spring caching
+		
+		spring security,JWT, Oauth,security
+		
+		mysql 
+		
+		
+		Compare NoSQL with RDBMS
+MongoDB(database, documents, collections, aggregation) JSON based queries
+Insert/update/delete documents in Collections, projection, limit, sort
+		
+		
+		
+		Api gate way
+			
+									m1	8080
+				authentication
+				Api gate way		m2  8081
+	client			9191		
+						
+									m3   8082
+						
+						
+									m4
+						
+		
+		
+		
+		
+		circuit breaker pattern  ->resielence 4j
+		
+			m1    m2    m3   m4
+		
+		
+		distributed tracing  zipkin,slueth
+		
+		
+	Spring security	
+		
+		
+		autentication
+		autherization  JWT  token
+		
+		
+		
+		https://medium.com/vedity/spring-boot-caching-mechanism-8ef901147e60
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
